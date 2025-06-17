@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import json
-
+#tarayıcıyı başlat belirtilen url ye git 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://www.e-icisleri.gov.tr/Anasayfa/MulkiIdariBolumleri.aspx")
 
@@ -63,7 +63,7 @@ for il_index in range(1, 82):  # Türkiye'deki 81 il olduğu için sabit sayıy�
             if mahalle_id in ("", "-1"):
                 continue
 
-            posta_kodu = ""  
+            posta_kodu = ""
 
             mahalleler_list.append({
                 "mahalle_id": mahalle_id,
