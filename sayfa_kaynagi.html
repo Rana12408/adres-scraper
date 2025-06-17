@@ -1,0 +1,898 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_Head1"><title>e-İÇİŞLERİ PROJESİ</title><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=.5)"><link href="../App_Themes/Main/Main.css" rel="stylesheet" type="text/css"><link href="../App_Themes/Main/Images/Genel/icislerilogo.ico?v=1.1" rel="shortcut icon" type="image/x-icon"><link href="../App_Themes/Main/master2011.css" rel="stylesheet" type="text/css"><link href="../App_Themes/Main/InsanHaklari.css" rel="stylesheet" type="text/css">
+    <link href="../App_Themes/Main/HataSayfasi/hatamain.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/highslide/highslide.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/highslide/highslide-ie6.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/Images/Login/2011/Login2011.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/InsanHaklari.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/Main.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/MainMobile.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/master2011.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/Modul/Evrak/visoft__tab_xpie7.css" type="text/css" rel="stylesheet"><link href="../App_Themes/Main/Modul/MulkiIdareBolumleri/IllerIdaresi.css" type="text/css" rel="stylesheet"><style type="text/css">.highslide img {cursor: url(/App_Themes/Main/highslide/graphics/zoomin.cur), pointer !important;}.highslide-viewport-size {position: fixed; width: 100%; height: 100%; left: 0; top: 0}</style></head>
+<body id="ctl00_masterBody" class="PopUpBody" style="">
+    <script type="text/javascript">
+        document.onkeydown = DistributeKeydownEventsToRelatedMethods;
+        function DistributeKeydownEventsToRelatedMethods(event) {
+            //Olmayan bir method çağrıldığında sorun olmaması için, method try-catch içinde çağrılmalı
+            try { CallUserControlsKeydownEventMethods(event); } catch (exception) { }
+            try { SayfayaOzelKeydownEventDagitici(event); } catch (exception) { }
+        }
+
+        function PencereyiKapat() {
+            try { PopUpWindowClosed(); } catch (exception) { }
+            window.close();
+        }
+
+        function CarpidanCikisYapPopUp() {
+            var iX = window.document.body.offsetWidth - window.event.clientX;
+            var iY = window.event.clientY;
+
+            if ((iX <= 30 && iY < 0)) {
+                try { PopUpWindowClosed(); } catch (exception) { }
+            }
+        }
+        
+    </script>
+    <form name="aspnetForm" method="post" action="./MulkiIdariBolumleri.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" disabled="disabled">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZJR3pf5KF3B6tEFuZ3HEiQMfmsRXm1_vBo-mjMg44UCRcUsgUg2&amp;t=638628332627334853" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1MppHWLgKNtirbTdAAhLaOPLLt-jlInnA0D2deaRS0SNi6IDyKPyveXxcgRFcUKXe4n7FT7bTy-BKicFi9Q63lg8W9nzFTBmPojZp6kEbNfGMC8nHQ2&amp;t=71590056" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"tr-TR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"₺","NaNSymbol":"NaN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":2,"PercentNegativePattern":2,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"ÖÖ","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402289999999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":".","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy dddd HH:mm:ss","LongDatePattern":"d MMMM yyyy dddd","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"ÖS","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"d.MM.yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Paz","Pzt","Sal","Çar","Per","Cum","Cmt"],"ShortestDayNames":["Pa","Pt","Sa","Ça","Pe","Cu","Ct"],"DayNames":["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"],"AbbreviatedMonthNames":["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara",""],"MonthNames":["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık",""],"IsReadOnly":true,"NativeCalendarName":"Miladi Takvim","AbbreviatedMonthGenitiveNames":["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara",""],"MonthGenitiveNames":["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık",""]},"eras":[1,"MS",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvjOpIsU7ZjKCztyDAmCWvnRHGBWiphEZubIw5fvUNOEH7CXEJ4PAJYAkkRX6vXL3AgKbIw-oplmJ1zreGZswPSWLIalcdolnninUScXkB-CWY7f8r46QCVgX0e0ldNiW--msORs1&amp;t=b990ecd" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8ONv3IpbcL5co8dgPsE9sj0rvFqdjS7X1caYp6ORBk2RmNXtEwCf0W5ek2SMh7Wna5eJFy1Hm7SBVvEf4Hc8oe3IkRI6gglu88CLoXWobn_z4Cxi3ZsnZP-HgrjQnSfiNZCtJBk81&amp;t=b990ecd" type="text/javascript"></script>
+<script src="../Javascript/GenelYeni.js" type="text/javascript"></script>
+<script src="../Javascript/PopUp.js" type="text/javascript"></script>
+<script src="../Javascript/TabStrip.js" type="text/javascript"></script>
+<script src="../Javascript/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../Javascript/jqueryPlugins/jquery-fieldselection.js" type="text/javascript"></script>
+<script src="../Javascript/Tarih.js" type="text/javascript"></script>
+<script src="../Javascript/TarihIkili.js" type="text/javascript"></script>
+<script src="../Javascript/UserControlTextBox.js" type="text/javascript"></script>
+<script src="../Javascript/GenelTextBox.js" type="text/javascript"></script>
+<script src="../Javascript/GeneleAcikSayfalar/tools.js" type="text/javascript"></script>
+<script src="../Javascript/UyariGoruntule.js" type="text/javascript"></script>
+<script src="../Javascript/json.js" type="text/javascript"></script>
+<script src="../Javascript/jqueryPlugins/jquery.tmpl.min.js" type="text/javascript"></script>
+<script src="../Javascript/jqueryPlugins/JqueryAutoComplete/jquery.autocomplete.js" type="text/javascript"></script>
+<script src="../Javascript/jqueryPlugins/JqueryAutoComplete/AutoCompleteFormat.js" type="text/javascript"></script>
+<script src="../Javascript/UserControlAutoComplete.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dMtrWYtYVdP90oUUR-ZVm8BI4mbYu2MR-MXNzkqcvaAe1sV619gJoLO_n5uI7ZtUu9OQLbUeicBilSe5hoTu0AfjYjnfqOdRM1u78tFaktsUbGB5xe-1DvTVAR1N2gsycHWN2w2&amp;t=1f6c9a90" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=LkSbRRtTbnpvh0g927IxkLkeZYLzaZb3be8wvVf65kvZpdCJ9ECcsj2mcmFxypAJ3vKgZ272ex8GdMsdvkSA8aFjuSLF4bWzEe5IKSzRX4JnggGFvWSX1soJrn5Ar_NEDZ4lXg2&amp;t=1f6c9a90" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=beb9cQ9ZLEsvO0Gw0Ci-lDagEU1IUdMqfdcOiblteI5mgzHyTANSBSa6u8w-KZx3RjSbmklclO3Od9jsDBuTEFzW8I9Rigb6y4kLxWPmRd3nrj1gb197e4ytI2eSSNDxyHztFg2&amp;t=1f6c9a90" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=8CjII1v0OLoMNKf5zGXmeoikQNAh8bPs6qxJhnCGoIK5GusviztCQ4p2-zoW1cRHa2oIxvF7DSTLAqNbay6JCN4hcreA-9nXpebmDB2VwK3Q5YRpM6FQjExvWoGqVMBB1ELpQZ9DfNFmGTuQ-JckVE1DumY1&amp;t=1f6c9a90" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=uH59TSkrH0oPIYTMKeH2-8ZfV8y8wvJF8AqL21hhLSAZytKBCLjQkmFF4Y6PoxRISJneGwqF2WCG_nRtVLDxIyuzOQYYQ2Oe81AvEoT6XxqNOHtg60g1gllX9M-VI2Fki85dqJRw0CL4gaB6F4CYs1rfotnH7Ls5PX4BpGieE0cWZCke0&amp;t=1f6c9a90" type="text/javascript"></script>
+<script src="../WebServices/MasterPageWS.asmx/js" type="text/javascript"></script>
+<script src="../WebServices/FillCascadeDdlViaJs.asmx/js" type="text/javascript"></script>
+<script src="../WebServices/BilgiYardimMetni.asmx/js" type="text/javascript"></script>
+<script src="../WebServices/UserControls.asmx/js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F1D6E313">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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">
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$UpdatePanel1',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="PopUpBg">
+        <div id="divUstTile" class="PopUpUstTile">
+            <table width="100%">
+                <tbody><tr>
+                    <td align="left" width="25%">
+                        <div class="PopUpToolSol" style="width: 40px;">
+                            <div class="PopUpToolSag">
+                                <div class="PopUpToolTile">
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tbody><tr>
+                                            <td>
+                                                <img id="imgRefresh" src="../App_Themes/Main/Images/Ikonlar/yenile.png" alt="Tazele" onclick="window.location=window.location" style="cursor: hand;">
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="50%" align="center">
+                        <div class="PopUpToolSolBaslik">
+                            <div class="PopUpToolSag">
+                                <div class="PopUpToolTileBaslik" title="MÜLKİ İDARE BİRİMLERİ">
+                                    <b>
+                                        MÜLKİ İDARE BİRİMLERİ
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="right">
+                        <div class="PopUpToolSol" style="width: 60px;">
+                            <div class="PopUpToolSag">
+                                <div class="PopUpToolTile">
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tbody><tr>
+                                            <td style="width: 20px;">
+                                                
+
+
+<script type="text/javascript" src="/Javascript/highslide/highslide-full.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/App_Themes/Main/highslide/highslide.css">
+
+<script type="text/javascript">
+    hs.graphicsDir = '/App_Themes/Main/highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.wrapperClassName = 'draggable-header';
+
+    function BilgiYardimMetniniWebMethodIleAl(sender, primaryKey) {
+        var dizin = ObjeDizini(sender.id);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        if (lblMetin.innerText == '') {
+            ShowProgress();
+            PageMethods.BilgiYardimMetniniWebMethodIleAl(primaryKey, sender.id, OnBilgiYardimMetniAlindi, OnBilgiYardimMetniAlinirkenHataOlustu, sender.id);
+        }
+        else
+            return hs.htmlExpand(sender);
+    }
+    
+    function BilgiYardimMetniniWebServiceIleAl(sender, primaryKey, modulAdi) {
+        var dizin = ObjeDizini(sender.id);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        if (lblMetin.innerText == '') {
+            ShowProgress();
+            BilgiYardimMetni.BilgiYardimMetniniWebServiceIleAl(primaryKey, sender.id, modulAdi, OnBilgiYardimMetniAlindi, OnBilgiYardimMetniAlinirkenHataOlustu, sender.id);
+        }
+        else
+            return hs.htmlExpand(sender);
+    }
+    function OnBilgiYardimMetniAlindi(result, userContext, methodName) {
+        var dizin = ObjeDizini(userContext);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        lblMetin.innerHTML = result;
+        var imgButton = getObj(userContext);
+        HideProgress();
+        return hs.htmlExpand(imgButton);
+    }
+    function OnBilgiYardimMetniAlinirkenHataOlustu(error, userContext, methodName) {
+        HideProgress();
+        var errMsg = "Bilgi yardım metni alınırken hata oluştu !";
+        var hdnObj = getObj(ObjeDizini(userContext) + 'HiddenFieldHataMesaji');
+        if (hdnObj.value != '') errMsg = hdnObj.value;
+        alert(errMsg);
+    }
+
+    function ShowProgress() {
+        $("#spanBilgiYardimYukleniyorGif").css("display", "block");
+    }
+
+    function HideProgress() {
+        $("#spanBilgiYardimYukleniyorGif").css("display", "none");
+    }
+    
+</script>
+
+<input type="hidden" name="ctl00$BilgiYardimAciklama$HiddenFieldHataMesaji" id="ctl00_BilgiYardimAciklama_HiddenFieldHataMesaji">
+<span id="spanBilgiYardimYukleniyorGif" style="display: none; text-align: center;
+    position: absolute; margin-top: 2px;">
+    <img src="../App_Themes/Main/Images/Ortak/yukleniyor.gif" alt="Yukleniyor">
+</span>
+<img id="ctl00_BilgiYardimAciklama_ImageBilgiYardim" title="Bilgi İçin Tıklayın" onclick="return hs.htmlExpand(this);" src="../App_Themes/Main/Images/Ikonlar/aciklama.png" align="absmiddle" style="border-width:0px;cursor: pointer;">
+<div class="highslide-maincontent" style="display: none;">
+    <table id="ctl00_BilgiYardimAciklama_tableBilgiYardim">
+	<tbody><tr>
+		<td>
+                <img id="ctl00_BilgiYardimAciklama_ImageBaslik" src="../App_Themes/Main/Images/MessageBox/basari.gif" style="border-width:0px;">
+                <span id="ctl00_BilgiYardimAciklama_LabelBaslik" style="font-size:Medium;font-weight:bold;">AÇIKLAMA</span>
+                <br>
+                <br>
+                <span id="ctl00_BilgiYardimAciklama_LabelMetin">Herhangi bir açıklama metni girilmemiştir.</span>
+                <br>
+                <br>
+            </td>
+	</tr>
+</tbody></table>
+
+</div>
+
+                                            </td>
+                                            <td style="width: 20px;">
+                                                <img id="ctl00_ImageKapat" title="Pencereyi Kapat" onclick="PencereyiKapat();" src="../App_Themes/Main/Images/Ikonlar/kapat.png" style="border-width:0px;cursor: pointer;">
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    <input type="hidden" name="ctl00$HiddenFieldInnerHtml" id="ctl00_HiddenFieldInnerHtml">
+                                    <input type="hidden" name="ctl00$HiddenFieldPageOrientation" id="ctl00_HiddenFieldPageOrientation">
+                                    <div id="ctl00_pnl">
+	
+                                    
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div style="width: 100%; text-align: center;">
+            <center>
+                
+    <table id="ctl00_cph1_TableCografiBirimler" align="center" width="100%">
+	<tbody><tr>
+		<td style="width: 90%" valign="top">
+                <table width="100%">
+                    
+                    <tbody><tr>
+                        <td>
+                            
+<style type="text/css">
+    .style3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        font-weight: bold;
+    }
+</style>
+
+<fieldset class="Parsel">
+    <legend>Türkiye Mülki İdare Bölümleri Envanteri</legend>
+    <table id="ctl00_cph1_CografiBirimControl_Table2" cellpadding="0" cellspacing="0">
+			<tbody><tr id="ctl00_cph1_CografiBirimControl_Tr6">
+				<td id="ctl00_cph1_CografiBirimControl_Td1" class="MulkiIdareVeriBaslik">İl Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td2" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblIlSayisi">81</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td3" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgBtnIlSayisi" id="ctl00_cph1_CografiBirimControl_imgBtnIlSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgBtnIlSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                 <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton5" id="ctl00_cph1_CografiBirimControl_ImageButton5" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td4" class="MulkiIdareVeriBaslik">Büyükşehir Belediyesi Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td5" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblBuyuksehirBelediyeSayisi">30</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td6" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgBtnBuyuksehirSayisi" id="ctl00_cph1_CografiBirimControl_imgBtnBuyuksehirSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgBtnBuyuksehirSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">               
+                <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton4" id="ctl00_cph1_CografiBirimControl_ImageButton4" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton4&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+			</tr>
+			<tr id="ctl00_cph1_CografiBirimControl_Tr7">
+				<td id="ctl00_cph1_CografiBirimControl_Td7" class="MulkiIdareVeriBaslik">İlçe Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td8" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblIlceSayisi">922</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td9" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonIlceSayisi1" id="ctl00_cph1_CografiBirimControl_imgButtonIlceSayisi1" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonIlceSayisi1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton3" id="ctl00_cph1_CografiBirimControl_ImageButton3" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td10" class="MulkiIdareVeriBaslik">İl Belediyesi Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td11" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblIlBelediyeSayisi">51</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td12" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonIlBelediyeSayisi" id="ctl00_cph1_CografiBirimControl_imgButtonIlBelediyeSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonIlBelediyeSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                   <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton6" id="ctl00_cph1_CografiBirimControl_ImageButton6" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton6&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+			</tr>
+			<tr id="ctl00_cph1_CografiBirimControl_Tr8">
+				<td id="ctl00_cph1_CografiBirimControl_Td18" class="MulkiIdareVeriBaslik">Mahalle Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td118" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblMahalleSayisi">32281</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td115" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonMahalleSayisi" id="ctl00_cph1_CografiBirimControl_imgButtonMahalleSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonMahalleSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonMahalleSayisiExcel" id="ctl00_cph1_CografiBirimControl_imgButtonMahalleSayisiExcel" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonMahalleSayisiExcel&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td16" class="MulkiIdareVeriBaslik">Büyükşehir İlçe Belediyesi Sayısı:
+            </td>
+				<td class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblBuyuksehirIlceBelediyeSayisi">519</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td17" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonBuyukSehitIlceBldSayisi" id="ctl00_cph1_CografiBirimControl_imgButtonBuyukSehitIlceBldSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonBuyukSehitIlceBldSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                   <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton2" id="ctl00_cph1_CografiBirimControl_ImageButton2" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+			</tr>
+			<tr id="ctl00_cph1_CografiBirimControl_Tr9">
+				<td id="ctl00_cph1_CografiBirimControl_Td121" class="MulkiIdareVeriBaslik">Köy Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td122" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblKoySayisi">18240</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td117" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonKoySayisi" id="ctl00_cph1_CografiBirimControl_imgButtonKoySayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonKoySayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                
+                <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton7" id="ctl00_cph1_CografiBirimControl_ImageButton7" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td119" class="MulkiIdareVeriBaslik">İlçe Belediyesi Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td120" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblIlceBelediyeSayisi">403</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td116" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgIlceBelediyesiSayisi" id="ctl00_cph1_CografiBirimControl_imgIlceBelediyesiSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgIlceBelediyesiSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                    <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton8" id="ctl00_cph1_CografiBirimControl_ImageButton8" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton8&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+			</tr>
+			<tr id="ctl00_cph1_CografiBirimControl_Tr10">
+				<td id="ctl00_cph1_CografiBirimControl_Td19" class="MulkiIdareVeriBaslik">Bağlı Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td20" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_LabelBagliSayisi">23789</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td21" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton1" id="ctl00_cph1_CografiBirimControl_ImageButton1" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                 <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton9" id="ctl00_cph1_CografiBirimControl_ImageButton9" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton9&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td123" class="MulkiIdareVeriBaslik">Belde Belediyesi Sayısı:
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td124" class="MulkiIdareVeri">
+                <span id="ctl00_cph1_CografiBirimControl_lblBeldeBelediyeSayisi">400</span>
+            </td>
+				<td id="ctl00_cph1_CografiBirimControl_Td1118" class="PDF">
+                <input type="image" name="ctl00$cph1$CografiBirimControl$imgButtonBeldeBelediyesiSayisi" id="ctl00_cph1_CografiBirimControl_imgButtonBeldeBelediyesiSayisi" jqueryclass="jButtonPDF" src="/App_Themes/Main/Images/Ikonlar/pdf.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$imgButtonBeldeBelediyesiSayisi&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+                  <input type="image" name="ctl00$cph1$CografiBirimControl$ImageButton10" id="ctl00_cph1_CografiBirimControl_ImageButton10" jqueryclass="jButtonExcel" src="/App_Themes/Main/Images/Ikonlar/excel.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ImageButton10&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+            </td>
+			</tr>
+			<tr id="ctl00_cph1_CografiBirimControl_Tr12">
+				<td id="ctl00_cph1_CografiBirimControl_Td13"></td>
+				<td id="ctl00_cph1_CografiBirimControl_Td14"></td>
+				<td id="ctl00_cph1_CografiBirimControl_Td15"></td>
+				<td class="style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toplam Belediye Sayısı
+            </td>
+				<td>
+                <b>
+                    <span id="ctl00_cph1_CografiBirimControl_lblToplamBelediyeSayisi">1403</span>
+                </b>
+            </td>
+				<td class="PDF"></td>
+			</tr>
+		</tbody></table>
+		
+</fieldset>
+<table>
+    <tbody><tr>
+        <td>
+            <fieldset class="Parsel">
+                <legend>Listeler</legend>
+                <table class="AnaTablo" width="300">
+                    <tbody><tr>
+                        <th id="Th4" colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol">İl:
+                        </td>
+                        <td class="TdRenkSag">
+                            <select name="ctl00$cph1$CografiBirimControl$DropDownListIl" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cph1$CografiBirimControl$DropDownListIl\',\'\')', 0)" id="ctl00_cph1_CografiBirimControl_DropDownListIl" class="BorderRadius10">
+			<option selected="selected" value="-1">Seçiniz</option>
+			<option value="1">ADANA</option>
+			<option value="2">ADIYAMAN</option>
+			<option value="3">AFYONKARAHİSAR</option>
+			<option value="4">AĞRI</option>
+			<option value="68">AKSARAY</option>
+			<option value="5">AMASYA</option>
+			<option value="6">ANKARA</option>
+			<option value="7">ANTALYA</option>
+			<option value="75">ARDAHAN</option>
+			<option value="8">ARTVİN</option>
+			<option value="9">AYDIN</option>
+			<option value="10">BALIKESİR</option>
+			<option value="74">BARTIN</option>
+			<option value="72">BATMAN</option>
+			<option value="69">BAYBURT</option>
+			<option value="11">BİLECİK</option>
+			<option value="12">BİNGÖL</option>
+			<option value="13">BİTLİS</option>
+			<option value="14">BOLU</option>
+			<option value="15">BURDUR</option>
+			<option value="16">BURSA</option>
+			<option value="17">ÇANAKKALE</option>
+			<option value="18">ÇANKIRI</option>
+			<option value="19">ÇORUM</option>
+			<option value="20">DENİZLİ</option>
+			<option value="21">DİYARBAKIR</option>
+			<option value="81">DÜZCE</option>
+			<option value="22">EDİRNE</option>
+			<option value="23">ELAZIĞ</option>
+			<option value="24">ERZİNCAN</option>
+			<option value="25">ERZURUM</option>
+			<option value="26">ESKİŞEHİR</option>
+			<option value="27">GAZİANTEP</option>
+			<option value="28">GİRESUN</option>
+			<option value="29">GÜMÜŞHANE</option>
+			<option value="30">HAKKARİ</option>
+			<option value="31">HATAY</option>
+			<option value="76">IĞDIR</option>
+			<option value="32">ISPARTA</option>
+			<option value="34">İSTANBUL</option>
+			<option value="35">İZMİR</option>
+			<option value="46">KAHRAMANMARAŞ</option>
+			<option value="78">KARABÜK</option>
+			<option value="70">KARAMAN</option>
+			<option value="36">KARS</option>
+			<option value="37">KASTAMONU</option>
+			<option value="38">KAYSERİ</option>
+			<option value="71">KIRIKKALE</option>
+			<option value="39">KIRKLARELİ</option>
+			<option value="40">KIRŞEHİR</option>
+			<option value="79">KİLİS</option>
+			<option value="41">KOCAELİ</option>
+			<option value="42">KONYA</option>
+			<option value="43">KÜTAHYA</option>
+			<option value="44">MALATYA</option>
+			<option value="45">MANİSA</option>
+			<option value="47">MARDİN</option>
+			<option value="33">MERSİN</option>
+			<option value="48">MUĞLA</option>
+			<option value="49">MUŞ</option>
+			<option value="50">NEVŞEHİR</option>
+			<option value="51">NİĞDE</option>
+			<option value="52">ORDU</option>
+			<option value="80">OSMANİYE</option>
+			<option value="53">RİZE</option>
+			<option value="54">SAKARYA</option>
+			<option value="55">SAMSUN</option>
+			<option value="56">SİİRT</option>
+			<option value="57">SİNOP</option>
+			<option value="58">SİVAS</option>
+			<option value="63">ŞANLIURFA</option>
+			<option value="73">ŞIRNAK</option>
+			<option value="59">TEKİRDAĞ</option>
+			<option value="60">TOKAT</option>
+			<option value="61">TRABZON</option>
+			<option value="62">TUNCELİ</option>
+			<option value="64">UŞAK</option>
+			<option value="65">VAN</option>
+			<option value="77">YALOVA</option>
+			<option value="66">YOZGAT</option>
+			<option value="67">ZONGULDAK</option>
+
+		</select>
+                            <br>
+                            <span id="ctl00_cph1_CografiBirimControl_CusValidatorIl" style="color:Red;visibility:hidden;">İl Seçimi Yapmalısınız!</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol">İlçe:
+                        </td>
+                        <td class="TdRenkSag">
+                            <select name="ctl00$cph1$CografiBirimControl$DropDownListIlce" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cph1$CografiBirimControl$DropDownListIlce\',\'\')', 0)" id="ctl00_cph1_CografiBirimControl_DropDownListIlce" disabled="disabled" class="BorderRadius10">
+
+		</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol">Köy:
+                        </td>
+                        <td class="TdRenkSag">
+                            <select name="ctl00$cph1$CografiBirimControl$DropDownListKoy" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cph1$CografiBirimControl$DropDownListKoy\',\'\')', 0)" id="ctl00_cph1_CografiBirimControl_DropDownListKoy" class="BorderRadius10">
+
+		</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol">Rapor Tipi:
+                        </td>
+                        <td class="TdRenkSag">
+                            <select name="ctl00$cph1$CografiBirimControl$DropDownListTip" id="ctl00_cph1_CografiBirimControl_DropDownListTip" disabled="disabled" class="BorderRadius10">
+			<option selected="selected" value="7">Bağlıların Listesi</option>
+
+		</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol">Rapor Şekli:
+                        </td>
+                        <td class="TdRenkSag">
+                            <select name="ctl00$cph1$CografiBirimControl$DropDownListRaporSekli" id="ctl00_cph1_CografiBirimControl_DropDownListRaporSekli" class="BorderRadius10">
+			<option selected="selected" value="Alfabetik">Alfabetik</option>
+			<option value="Genel">Genel</option>
+
+		</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol">Rapor Tipi:
+                        </td>
+                        <td class="TdRenkSag">
+                            <select name="ctl00$cph1$CografiBirimControl$DropDownListRaporTipi" id="ctl00_cph1_CografiBirimControl_DropDownListRaporTipi" class="BorderRadius10">
+			<option selected="selected" value="PDF">PDF</option>
+			<option value="EXCEL">Excel</option>
+
+		</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="ctl00$cph1$CografiBirimControl$ButtonRaporOlustur" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ButtonRaporOlustur&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_cph1_CografiBirimControl_ButtonRaporOlustur" class="ButtonListeAl" jqueryclass="jButtonListeAl">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </fieldset>
+        </td>
+        <td>
+            <fieldset class="Parsel">
+                <legend>Türkiye Mülki İdare Bölümü Arama</legend>
+                <table class="AnaTablo" width="300px">
+                    <tbody><tr id="ctl00_cph1_CografiBirimControl_Tr1">
+			<th id="ctl00_cph1_CografiBirimControl_Th2" colspan="2"></th>
+		</tr>
+		
+                    <tr>
+                        <td colspan="2" align="right"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <span id="ctl00_cph1_CografiBirimControl_LabelAramaMesaj" style="color:Red;font-size:Small;"></span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="TdRenkSol" width="30%">Aranacak İl Adı :
+                        </td>
+                        <td class="TdRenkSag" align="left" width="70%">
+                             <select name="ctl00$cph1$CografiBirimControl$DropDownListIlArama" id="ctl00_cph1_CografiBirimControl_DropDownListIlArama" class="BorderRadius10">
+			<option value="-1">Seçiniz</option>
+			<option value="0">TÜMÜ</option>
+			<option value="1">ADANA</option>
+			<option value="2">ADIYAMAN</option>
+			<option value="3">AFYONKARAHİSAR</option>
+			<option value="4">AĞRI</option>
+			<option value="68">AKSARAY</option>
+			<option value="5">AMASYA</option>
+			<option value="6">ANKARA</option>
+			<option value="7">ANTALYA</option>
+			<option value="75">ARDAHAN</option>
+			<option value="8">ARTVİN</option>
+			<option value="9">AYDIN</option>
+			<option value="10">BALIKESİR</option>
+			<option value="74">BARTIN</option>
+			<option value="72">BATMAN</option>
+			<option value="69">BAYBURT</option>
+			<option value="11">BİLECİK</option>
+			<option value="12">BİNGÖL</option>
+			<option value="13">BİTLİS</option>
+			<option value="14">BOLU</option>
+			<option value="15">BURDUR</option>
+			<option value="16">BURSA</option>
+			<option value="17">ÇANAKKALE</option>
+			<option value="18">ÇANKIRI</option>
+			<option value="19">ÇORUM</option>
+			<option value="20">DENİZLİ</option>
+			<option value="21">DİYARBAKIR</option>
+			<option value="81">DÜZCE</option>
+			<option value="22">EDİRNE</option>
+			<option value="23">ELAZIĞ</option>
+			<option value="24">ERZİNCAN</option>
+			<option value="25">ERZURUM</option>
+			<option value="26">ESKİŞEHİR</option>
+			<option value="27">GAZİANTEP</option>
+			<option value="28">GİRESUN</option>
+			<option value="29">GÜMÜŞHANE</option>
+			<option value="30">HAKKARİ</option>
+			<option value="31">HATAY</option>
+			<option value="76">IĞDIR</option>
+			<option value="32">ISPARTA</option>
+			<option value="34">İSTANBUL</option>
+			<option value="35">İZMİR</option>
+			<option value="46">KAHRAMANMARAŞ</option>
+			<option value="78">KARABÜK</option>
+			<option value="70">KARAMAN</option>
+			<option value="36">KARS</option>
+			<option value="37">KASTAMONU</option>
+			<option value="38">KAYSERİ</option>
+			<option value="71">KIRIKKALE</option>
+			<option value="39">KIRKLARELİ</option>
+			<option value="40">KIRŞEHİR</option>
+			<option value="79">KİLİS</option>
+			<option value="41">KOCAELİ</option>
+			<option value="42">KONYA</option>
+			<option value="43">KÜTAHYA</option>
+			<option value="44">MALATYA</option>
+			<option value="45">MANİSA</option>
+			<option value="47">MARDİN</option>
+			<option value="33">MERSİN</option>
+			<option value="48">MUĞLA</option>
+			<option value="49">MUŞ</option>
+			<option value="50">NEVŞEHİR</option>
+			<option value="51">NİĞDE</option>
+			<option value="52">ORDU</option>
+			<option value="80">OSMANİYE</option>
+			<option value="53">RİZE</option>
+			<option value="54">SAKARYA</option>
+			<option value="55">SAMSUN</option>
+			<option value="56">SİİRT</option>
+			<option value="57">SİNOP</option>
+			<option value="58">SİVAS</option>
+			<option value="63">ŞANLIURFA</option>
+			<option value="73">ŞIRNAK</option>
+			<option value="59">TEKİRDAĞ</option>
+			<option value="60">TOKAT</option>
+			<option value="61">TRABZON</option>
+			<option value="62">TUNCELİ</option>
+			<option value="64">UŞAK</option>
+			<option value="65">VAN</option>
+			<option value="77">YALOVA</option>
+			<option value="66">YOZGAT</option>
+			<option value="67">ZONGULDAK</option>
+
+		</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TdRenkSol" width="30%">Aranacak Birim Adı :
+                        </td>
+                        <td class="TdRenkSag" align="left" width="70%">
+                            <input name="ctl00$cph1$CografiBirimControl$TextBoxAdi" type="text" id="ctl00_cph1_CografiBirimControl_TextBoxAdi" class="BorderRadius10"><br>
+                            <span id="ctl00_cph1_CografiBirimControl_rfvTxtAdi" style="color:Red;display:none;">* En Az 2 Karakter Giriniz</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;
+                        </td>
+                        <td class="TdRenkSag">
+                            <table id="ctl00_cph1_CografiBirimControl_RadioButtonListAramaSekli" border="0">
+			<tbody><tr>
+				<td><input id="ctl00_cph1_CografiBirimControl_RadioButtonListAramaSekli_0" type="radio" name="ctl00$cph1$CografiBirimControl$RadioButtonListAramaSekli" value="Eşit" checked="checked"><label for="ctl00_cph1_CografiBirimControl_RadioButtonListAramaSekli_0">Eşit</label></td><td><input id="ctl00_cph1_CografiBirimControl_RadioButtonListAramaSekli_1" type="radio" name="ctl00$cph1$CografiBirimControl$RadioButtonListAramaSekli" value="İle Başlayan"><label for="ctl00_cph1_CografiBirimControl_RadioButtonListAramaSekli_1">İle Başlayan</label></td>
+			</tr>
+		</tbody></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" align="center">
+                            <input type="submit" name="ctl00$cph1$CografiBirimControl$ButtonAra" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph1$CografiBirimControl$ButtonAra&quot;, &quot;&quot;, true, &quot;birimara&quot;, &quot;&quot;, false, false))" id="ctl00_cph1_CografiBirimControl_ButtonAra" class="ButtonAra" jqueryclass="jButtonAra">
+                        </th>
+                    </tr>
+                </tbody></table>
+            </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <table>
+                <tbody><tr id="ctl00_cph1_CografiBirimControl_Tr5">
+			<td colspan="2" align="center" width="410px">
+                        <div>
+
+			</div>
+                    </td>
+		</tr>
+		
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+	</tr>
+</tbody></table>
+
+
+            </center>
+            <br>
+        </div>
+        <div style="width: 100%; text-align: left;">
+            
+            
+            <br>
+        </div>
+        <div style="position: fixed; bottom: 0; margin-left: 10px; z-index: 1000;">
+            <input type="image" name="ctl00$ImageResizePage" id="ctl00_ImageResizePage" title="Sayfa genişliğini ayarlamak için tıklayın" src="../App_Themes/Main/Images/Genel/resizepage.ico" onclick="ResizeScreenWidth(this); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ImageResizePage&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">
+        </div>
+        <div id="divPopupFooter" class="PopUpFooter" style="width: 100%; text-align: center; position: fixed;
+            bottom: 0;">
+            <div style="text-align: center;">
+                <font style="color: #176b9b; font-weight: bold; font-size: small; font-stretch: wider;">
+                    T.C. İçişleri Bakanlığı</font> <font color="#176b9b">- Bilgi Teknolojileri Genel Müdürlüğü
+                        - © 2011</font>
+            </div>
+        </div>
+    </div>
+    <table>
+        <tbody><tr>
+            <td align="center" colspan="3">
+                <div id="ctl00_UpdatePanel1">
+	
+                        <table style="width: 100%">
+                            <tbody><tr align="center">
+                                <td>
+                                    <div id="ctl00_UpdateProgressMainPopup" style="display:none;" role="status" aria-hidden="true">
+		
+                                            <div id="ctl00_PanelProgressMainPopup" style="position: fixed; z-index: 99; left: 518px; top: 355px;">
+			
+                                                <img id="ctl00_ImageProgress" src="../Resim/Ortak/loading.gif" style="border-width:0px;margin-left: 2px; margin-top: 7px">
+                                            
+		</div>
+                                            
+                                        
+	</div>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    
+<link href="/App_Themes/Main/Main.css" rel="stylesheet" type="text/css">
+
+<script language="javascript" type="text/javascript" src="/Javascript/UserControlTextBox.js"></script>
+
+<script language="javascript" type="text/javascript">
+
+    function MsgBoxKapat(sender) {
+        var objTable = getObj("ctl00_MessageBox1_tableMsgBox");
+        var objDiv = getObj("ctl00_MessageBox1_divMsgBox");
+        objTable.style.display = 'none';
+        objDiv.style.display = 'none';
+
+        if (typeof window.onMessageBoxClose === "function") { 
+            window.onMessageBoxClose();
+        }
+        
+        return false;
+    }
+
+    $(document).ready(function() { ResizeDivMsgBox(); })
+    window.onresize = function() { ResizeDivMsgBox(); }
+    function ResizeDivMsgBox() {
+        var objDiv = getObj("ctl00_MessageBox1_divMsgBox");
+        if (objDiv.style.display == 'block') {
+            objDiv.style.width = GetPageWidth();
+            objDiv.style.height = GetPageHeight();
+        }
+    }
+    
+</script>
+
+<div id="ctl00_MessageBox1_divMsgBox" style="left:0;opacity:0.2;z-index:110;position:absolute;background-color:#000;display:none;top:0;filter:alpha(opacity=20);">
+</div>
+
+
+
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    
+</div>
+            </td>
+        </tr>
+    </tbody></table>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_cph1_CografiBirimControl_CusValidatorIl"), document.getElementById("ctl00_cph1_CografiBirimControl_rfvTxtAdi"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_cph1_CografiBirimControl_CusValidatorIl = document.all ? document.all["ctl00_cph1_CografiBirimControl_CusValidatorIl"] : document.getElementById("ctl00_cph1_CografiBirimControl_CusValidatorIl");
+ctl00_cph1_CografiBirimControl_CusValidatorIl.errormessage = "İl Seçimi Yapmalısınız!";
+ctl00_cph1_CografiBirimControl_CusValidatorIl.evaluationfunction = "CustomValidatorEvaluateIsValid";
+var ctl00_cph1_CografiBirimControl_rfvTxtAdi = document.all ? document.all["ctl00_cph1_CografiBirimControl_rfvTxtAdi"] : document.getElementById("ctl00_cph1_CografiBirimControl_rfvTxtAdi");
+ctl00_cph1_CografiBirimControl_rfvTxtAdi.controltovalidate = "ctl00_cph1_CografiBirimControl_TextBoxAdi";
+ctl00_cph1_CografiBirimControl_rfvTxtAdi.errormessage = "* En Az 2 Karakter Giriniz";
+ctl00_cph1_CografiBirimControl_rfvTxtAdi.display = "Dynamic";
+ctl00_cph1_CografiBirimControl_rfvTxtAdi.validationGroup = "birimara";
+ctl00_cph1_CografiBirimControl_rfvTxtAdi.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cph1_CografiBirimControl_rfvTxtAdi.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ctl00_cph1_CografiBirimControl_CusValidatorIl').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cph1_CografiBirimControl_CusValidatorIl'));
+}
+
+document.getElementById('ctl00_cph1_CografiBirimControl_rfvTxtAdi').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_cph1_CografiBirimControl_rfvTxtAdi'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.AlwaysVisibleControlBehavior, {"HorizontalSide":1,"VerticalSide":1,"id":"ctl00_PanelProgressMainPopup_AlwaysVisibleControlExtender"}, null, null, $get("ctl00_PanelProgressMainPopup"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":10,"dynamicLayout":true}, null, null, $get("ctl00_UpdateProgressMainPopup"));
+});
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById("aspnetForm").disabled = false;
+            RunOtherNecessaryJsFunctionsOnLoad();
+        })
+
+        function RunOtherNecessaryJsFunctionsOnLoad() {
+            try {
+                /* Buraya yazılan fonksiyon isimleri bu masterdan türeyen sayfalara JS fonksiyonu olarak konulur 
+                ve sayfa yüklendiğinde devereye girer. Sayfada bu fonksiyon yoksa hataya düşer ve catch bloğunda hata yutulur.
+                */
+
+                RunOnPageLoad();
+            }
+            catch (exception) {
+                //Do Nothing
+            }
+        }
+
+        function HidePopupMasterFooter() {
+            GetPopupFooterObject().style.display = "none";
+        }
+        function ShowPopupMasterFooter() {
+            GetPopupFooterObject().style.display = "block";
+        }
+        function GetPopupFooterObject() {
+            var obj = getObj('divPopupFooter');
+            return obj;
+        }
+
+        function HideShowToolBarButton(buttonName, hide) {
+            var status = hide == true ? 'none' : 'block';
+            switch (buttonName) {
+                case "refresh": getObj('imgRefresh').style.display = status; break;
+                case "info": getObj('ctl00_BilgiYardimAciklama_ImageBilgiYardim').style.display = status; break;
+                case "close": getObj('ctl00_ImageKapat').style.display = status; break;
+                default:
+            }
+        }
+
+        function HideHeader() {
+            getObj('divUstTile').style.display = 'none';
+        }
+        function ShowHeader() {
+            getObj('divUstTile').style.display = 'block';
+        }
+      
+    </script>
+
+
+<div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="İptal etmek için tıklayın" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">Yükleniyor...</a><div style="display: none;"></div><div class="highslide-viewport highslide-viewport-size" style="padding: 0px; border: none; margin: 0px; visibility: hidden;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="/App_Themes/Main/highslide/graphics/outlines/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; top: -9999px;"></div></body></html>
