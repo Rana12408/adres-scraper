@@ -6,7 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import json
-#tarayıcıyı başlat belirtilen url ye git 
+
+# tarayıcıyı başlat belirtilen url ye git
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://www.e-icisleri.gov.tr/Anasayfa/MulkiIdariBolumleri.aspx")
 
@@ -85,4 +86,8 @@ for il_index in range(1, 82):  # Türkiye'deki 81 il olduğu için sabit sayıy�
 
 driver.quit()
 
-print(json.dumps(data, ensure_ascii=False, indent=2))
+# EKRANA YAZDIRMAK YERİNE .JSON DOSYASINA KAYDEDİYORUZ
+with open("turkiye_il_ilce_mahalle.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print("✅ JSON dosyası başarıyla oluşturuldu: turkiye_il_ilce_mahalle.json")
